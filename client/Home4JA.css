@@ -1,1 +1,48 @@
-/* CSS declarations go here */
+#post {
+    max-width: 200px;
+    margin: 20px auto 10px auto;
+    background: #06c800;
+    border: 1px solid #06c800;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+#navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    background: #ff5729;
+    border-bottom: 1px solid #ff5729;
+    border-top: 1px solid #ff5729;
+}
+
+#navbar #navbar-left {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('http://res.cloudinary.com/remotecontrol/image/upload/v1450092982/direction196_ul2xsv.png') no-repeat center;
+    cursor: pointer;
+}
+
+#navbar #menu {
+    display: inline-block;
+    padding-left: 0;
+    margin-left: 5px;
+    margin-top: 7px;
+    vertical-align: top;
+    color: white;
+    font-size: 22px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+#confirm {
+    cursor: pointer;
+}
