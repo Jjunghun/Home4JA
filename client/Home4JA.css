@@ -8,6 +8,27 @@
     cursor: pointer;
 }
 
+#postsList {
+    margin: 10px auto;
+    max-width: 800px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 0;
+}
+
+#postsList li {
+    display: block;
+    border-top: 1px solid #c35a00;
+    background-color: white;
+    margin: 0;
+    padding: 20px 12px;
+    line-height: 25px;
+    word-wrap: break-word;
+    word-break: break-all;
+    cursor: pointer;
+}
+
 #navbar {
     position: relative;
     top: 0;
@@ -81,7 +102,7 @@ input {
     word-break: break-all;
 }
 
-#confirm {
+.confirm {
     order-radius: 0;
     background: green;
     border: 1px solid darkgreen;
