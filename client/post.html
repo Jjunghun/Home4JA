@@ -2,14 +2,23 @@
     <div id="navbar">
         <a href="/">
             <div id="navbar-left"></div>
-            <div id="menu">BACK</div>
+            <div id="menu">뒤로가기</div>
         </a>
     </div>
 
-    <div>
-        <form class="new-context">
-            <input type="text" name="text" placeholder="내용을 입력하세요.">
-        </form>
+    <div id="type-check">
+        <div class="type-check-line">
+            <strong>제 목</strong>
+            <form class="new-title">
+                <input type="text" name="title" placeholder="제목을 입력하세요.">
+            </form>
+        </div>
+
+        <div class="type-check-line">
+            <strong>내 용</strong>
+            <textarea id="content" name="content" tabindex="0" placeholder="내용을 입력하세요."></textarea>
+        </div>
+
         <div id="confirm">확인</div>
     </div>
 </template>

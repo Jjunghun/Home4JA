@@ -17,6 +17,7 @@ Template.main.events({
 
 Template.main.helpers({
    toposts: function () {
+       console.log(Posts.find({}));
        return Posts.find({});
    } 
 });

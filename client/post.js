@@ -1,12 +1,17 @@
 Template.post.events({
-    "submit .new-context": function (event) {
+    "submit .new-title": function (event) {
       event.preventDefault();
 
-      var text = event.target.text.value;
+      var contentsInfo = {
+          title : event.target.title.value,
+          content : $("#content").val()
+      };
 
-        Meteor.call("addPost", text);
+      console.log(contentsInfo);
+
+      Meteor.call("addPost", contentsInfo);
         
-      event.target.text.value = "";
+      event.target.title.value = "";
     },
 
     'click #confirm': function () {

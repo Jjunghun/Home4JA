@@ -10,12 +10,26 @@
     <div>
         <ul>
             {{#each toposts}}
-                {{> context}}
+                {{> postsList}}
             {{/each}}
         </ul>
     </div>
+
+    <div id="footer">
+        <div>
+            <div style="margin-bottom: 20px;">
+            <span>
+                <a style="color:white" href="/about">About</a>
+            </span>
+            <span style="margin-left:30px">
+                <a style="color:white" href="/contact">Contact</a>
+            </span>
+            </div>
+            Copyright © 2016 DSU. All rights reserved.
+        </div>
+    </div>
 </template>
 
-<template name="context">
-    <li>{{text}}</li>
+<template name="postsList">
+    <li>{{postContext.title}} {{postContext.content}}</li>
 </template>
