@@ -1,0 +1,126 @@
+#post {
+    max-width: 200px;
+    margin: 20px auto 10px auto;
+    background: #06c800;
+    border: 1px solid #06c800;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+
+#postsList {
+    margin: 10px auto;
+    max-width: 800px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 0;
+}
+
+#postsList li {
+    display: block;
+    border-top: 1px solid #c35a00;
+    background-color: white;
+    margin: 0;
+    padding: 20px 12px;
+    line-height: 25px;
+    word-wrap: break-word;
+    word-break: break-all;
+    cursor: pointer;
+}
+
+#navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    background: #ff5729;
+    border-bottom: 1px solid #ff5729;
+    border-top: 1px solid #ff5729;
+}
+
+#navbar #navbar-left {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url('http://res.cloudinary.com/remotecontrol/image/upload/v1450092982/direction196_ul2xsv.png') no-repeat center;
+    cursor: pointer;
+}
+
+#navbar #menu {
+    display: inline-block;
+    padding-left: 0;
+    margin-left: 5px;
+    margin-top: 7px;
+    vertical-align: top;
+    color: white;
+    font-size: 22px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+input {
+    font: inherit;
+    margin: 5px 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 16px;
+}
+
+#type-check {
+    display: block;
+    max-width: 550px;
+    margin: 20px auto 10px auto;
+    border: 1px solid #afafaf;
+    padding: 10px;
+    text-align: left;
+}
+
+.type-check-line {
+    vertical-align: middle;
+    margin: 10px 0;
+}
+
+.type-check-line textarea {
+    font: inherit;
+    margin: 5px 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 1px solid #bdbdbd;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.confirm {
+    order-radius: 0;
+    background: green;
+    border: 1px solid darkgreen;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    margin: 5px 0;
+    text-align: center;
+    padding: 5px;
+}
+
+#footer {
+    padding: 30px 20px;
+    margin: auto;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+    background: #ff5729;
+    border-top: 1px solid #ff5729;
+    text-align: center;
+}
