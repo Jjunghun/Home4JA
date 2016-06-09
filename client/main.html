@@ -3,14 +3,25 @@
 </head>
 
 <template name="main">
-<<<<<<< HEAD
-    <h1>Project Meteor</h1>
+    <h1 style="text-align: center">For Job Applicants</h1>
 
-    <button id="clickme">글 게시하기</button>
-
-
-=======
-    <h1 style="text-align: center">Project Meteor</h1>
+    <div class="login-page">
+        <div class="form">
+            <form class="register-form">
+                <input type="text" id="name" placeholder="name"/>
+                <input type="password"  id="psw" placeholder="password"/>
+                <input type="email" id="email" placeholder="email address"/>
+                <button id="create">create</button>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+            </form>
+            <form class="login-form">
+                <input type="text" id="name" placeholder="name"/>
+                <input type="password"  id="psw" placeholder="password"/>
+                <button id="login">login</button>
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+            </form>
+        </div>
+    </div>
 
     <div id="post">글 게시하기</div>
 
@@ -39,5 +50,4 @@
 
 <template name="postsList">
     <li>{{postContext.title}} {{postContext.content}}</li>
->>>>>>> 45fceb35885bca6f7841fb587d4176b20755fad4
 </template>
