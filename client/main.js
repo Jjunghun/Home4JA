@@ -1,5 +1,5 @@
 Router.configure({
-   mainTemplate: 'main'
+    mainTemplate: 'main'
 });
 
 Router.route('/', {name: 'main'});
@@ -39,10 +39,10 @@ Template.main.events({
         //var email = event.target.EMAIL.value;
 
         var loginInfo = {
-          name : $("#name").val(),
-          password: $("#psw").val(),
-          email: $("#email").val()
-       };
+            name : $("#name").val(),
+            password: $("#psw").val(),
+            email: $("#email").val()
+        };
 
         console.log(loginInfo);
 
@@ -59,8 +59,8 @@ Template.main.events({
 });
 
 Template.main.helpers({
-   toposts: function () {
-       console.log(Posts.find({}));
-       return Posts.find({});
-   } 
+    toposts: function () {
+        console.log(Posts.find({}));
+        return Posts.find({});
+    }
 });

@@ -1,0 +1,37 @@
+<template name="about">
+
+    <div id="navbar">
+        <a href="/">
+            <div id="navbar-left"></div>
+            <div id="menu">뒤로가기</div>
+        </a>
+        <span id=menu style='float:right'>로그아웃</span>
+    </div>
+
+    <div class="header">
+
+        <h2>
+            <span style="color: #ff5729;">Home4JS</span>이란 ??
+        </h2>
+
+
+
+        <div id="introBar">
+             <span>
+            <a href="/intro" class="about-nav">Intro</a>
+        </span>
+        <span>
+            <a href="/rules" class="about-nav">Rules</a>
+        </span>
+        <span>
+            <a href="/tips" class="about-nav">Tips</a>
+        </span>
+
+        </div>
+
+        {{yield}}
+        {{>intro}}
+        {{>rules}}
+        {{>tips}}
+</div>
+</template>

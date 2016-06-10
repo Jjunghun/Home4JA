@@ -28,7 +28,30 @@
     word-break: break-all;
     cursor: pointer;
 }
-
+#introBar {
+    font-size: 12px;
+    text-align:center;
+    background-color: #ff5729;
+    padding: 5px 10px;
+    margin-top: 20px;
+}
+.about-nav {
+    text-decoration: none;
+    color: white;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom:5px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin: 40px;
+    cursor: pointer;
+}
+#sentense {
+    text-align: center; font-weight:bolder; font-size:24px;
+}
+#fontstyle {
+    font-size: 18px; font-weight: bolder; color:red;
+}
 #navbar {
     position: relative;
     top: 0;
@@ -63,6 +86,41 @@
     letter-spacing: 3px;
     cursor: pointer;
 }
+#intro, #rules, #tips{
+    text-align: left;
+    padding: 20px;
+    border-bottom: 1px;
+    line-height: 30px;
+}
+.rules-title {
+    font-weight: bolder;
+    font-size: 20px;
+}
+.rules-content {
+    margin-bottom: 25px;
+}
+
+.questions {
+    background-color: #ffc229;
+    color: white;
+    padding: 5px;
+    border: 1px #f5af00;
+    margin:0;
+}
+
+.answers {
+    padding:5px 10px;
+    margin: 0;
+    border-right:1px solid #f5af00;
+    border-left:1px solid #f5af00;
+
+}
+.header {
+    max-width: 550px;
+    margin: auto;
+    text-align: center;
+}
+
 
 input {
     font: inherit;
@@ -104,7 +162,7 @@ input {
 
 .confirm {
     order-radius: 0;
-    background: green;
+    background: white;
     border: 1px solid darkgreen;
     font-weight: bolder;
     color: white;
@@ -215,11 +273,7 @@ input {
     color: #EF3B3A;
 }
 body {
-    background: #76b852; /* fallback for old browsers */
-    background: -webkit-linear-gradient(right, #76b852, #8DC26F);
-    background: -moz-linear-gradient(right, #76b852, #8DC26F);
-    background: -o-linear-gradient(right, #76b852, #8DC26F);
-    background: linear-gradient(to left, #76b852, #8DC26F);
+    background: #FFFFFF; /* fallback for old browsers */
     font-family: "Roboto", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
