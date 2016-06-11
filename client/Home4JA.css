@@ -1,10 +1,34 @@
-#post {
+#front-body-intro, #login-body, #join-body {
+    padding: 20px;
+    margin: auto;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    background: #ff5729;
+    border-top: 1px solid #ff5729;
+    text-align: center;
+    line-height: 30px;
+}
+
+#front-logout {
+    max-width: 200px;
+    margin: 20px auto 10px auto;
+    background: #ff1018;
+    border: 1px solid #f60008;
+    cursor: pointer;
+}
+
+#front-create-article-a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+#front-create-article {
     max-width: 200px;
     margin: 20px auto 10px auto;
     background: #06c800;
     border: 1px solid #06c800;
-    color: white;
-    text-align: center;
     cursor: pointer;
 }
 
@@ -124,6 +148,7 @@ input {
     border-top: 1px solid #ff5729;
     text-align: center;
 }
+<<<<<<< HEAD
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 .login-page {
@@ -224,3 +249,84 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+=======
+
+#login-body, #join-body {
+    margin: auto;
+    background: white;
+    border-top: 0;
+    text-align: center;
+}
+
+#login-body h1, #join-body h1 {
+    color: black;
+    margin: 40px auto;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+#front-login-or-join {
+    max-width: 450px;
+    margin: 20px auto 10px auto;
+}
+
+#front-login-or-join #change-to-login {
+    background: #ffc229;
+}
+
+#front-login-or-join #change-to-join {
+    background: #2966ff;
+}
+
+#front-login, #front-join {
+    max-width: 450px;
+    margin: 20px auto 10px auto;
+}
+
+#front-login-or-join div {
+    display: inline-block;
+    width: 45%;
+    margin: 0;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+}
+
+#front-login-username, #front-login-password {
+    border: 1px solid #ffc229;
+}
+
+#front-login-submit {
+    border-radius: 0;
+    background: #ffc229;
+    border: 1px solid #ffc229;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+#front-join-username, #front-join-password {
+    border: 1px solid #2966ff;
+}
+
+#front-join-submit {
+    border-radius: 0;
+    background: #2966ff;
+    border: 1px solid #2966ff;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 5px;
+}
+>>>>>>> test1

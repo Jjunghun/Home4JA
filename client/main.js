@@ -1,9 +1,12 @@
 Router.configure({
-   mainTemplate: 'main'
+   //mainTemplate: 'main'
+   layoutTemplate: 'main'
 });
 
-Router.route('/', {name: 'main'});
+Router.route('/', {name: 'login'});
+Router.route('/join', {name: 'join'});
 Router.route('/post', {name: 'post'});
+<<<<<<< HEAD
 Router.route('/complete', {name: 'complete'});
 // Router.route('/post', function () {
 //    this.render('post');
@@ -57,10 +60,13 @@ Template.main.events({
         //return false;
     }
 });
+=======
+Router.route('/login', {name: 'loginPage'});
+>>>>>>> test1
 
 Template.main.helpers({
-   toposts: function () {
-       console.log(Posts.find({}));
-       return Posts.find({});
-   } 
+   // toposts: function () {
+   //     console.log(Posts.find({}));
+   //     return Posts.find({});
+   // } 
 });
