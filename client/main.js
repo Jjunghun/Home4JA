@@ -5,6 +5,7 @@ Router.configure({
 Router.route('/', {name: 'main'});
 Router.route('/post', {name: 'post'});
 Router.route('/complete', {name: 'complete'});
+Router.route('/about', {name: 'about'});
 // Router.route('/post', function () {
 //    this.render('post');
 // });
@@ -12,7 +13,9 @@ Router.route('/complete', {name: 'complete'});
 Template.main.events({
     'click #post' : function () {
         Router.go('/post');
-
+    },
+    'click #about':function() {
+        Router.go('/about')
     },
     'click .message a':function(){
         $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
@@ -39,10 +42,10 @@ Template.main.events({
         //var email = event.target.EMAIL.value;
 
         var loginInfo = {
-            name : $("#name").val(),
-            password: $("#psw").val(),
-            email: $("#email").val()
-        };
+          name : $("#name").val(),
+          password: $("#psw").val(),
+          email: $("#email").val()
+       };
 
         console.log(loginInfo);
 
@@ -59,8 +62,8 @@ Template.main.events({
 });
 
 Template.main.helpers({
-    toposts: function () {
-        console.log(Posts.find({}));
-        return Posts.find({});
-    }
+   toposts: function () {
+       console.log(Posts.find({}));
+       return Posts.find({});
+   } 
 });

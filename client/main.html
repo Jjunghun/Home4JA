@@ -5,23 +5,7 @@
 <template name="main">
     <h1 style="text-align: center">For Job Applicants</h1>
 
-    <div class="login-page">
-        <div class="form">
-            <form class="register-form">
-                <input type="text" id="name" placeholder="name"/>
-                <input type="password"  id="psw" placeholder="password"/>
-                <input type="email" id="email" placeholder="email address"/>
-                <button id="create">create</button>
-                <p class="message">Already registered? <a href="#">Sign In</a></p>
-            </form>
-            <form class="login-form">
-                <input type="text" id="name" placeholder="name"/>
-                <input type="password"  id="psw" placeholder="password"/>
-                <button id="login">login</button>
-                <p class="message">Not registered? <a href="#">Create an account</a></p>
-            </form>
-        </div>
-    </div>
+    {{>login}}
 
     <div id="post">글 게시하기</div>
 
@@ -37,7 +21,7 @@
         <div>
             <div style="margin-bottom: 20px;">
             <span>
-                <a style="color:white" href="/about/intro">About</a>
+                <a style="color:white" href="/about">About</a>
             </span>
             <span style="margin-left:30px">
                 <a style="color:white" href="/contact">Contact</a>

@@ -16,22 +16,26 @@
 
 
 
+
         <div id="introBar">
              <span>
             <a href="/intro" class="about-nav">Intro</a>
         </span>
         <span>
-            <a href="/rules" class="about-nav">Rules</a>
+            <a href="{{pathFor 'rules'}}" class="about-nav">Rules</a>
         </span>
         <span>
             <a href="/tips" class="about-nav">Tips</a>
         </span>
-
         </div>
+    </div>
 
+    <div>
         {{yield}}
-        {{>intro}}
-        {{>rules}}
-        {{>tips}}
-</div>
+        {{>list}}
+    </div>
+
+
+
+
 </template>
