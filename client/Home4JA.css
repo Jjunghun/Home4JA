@@ -1,5 +1,7 @@
-div {
-    display: block;
+body {
+    margin: 0;
+    background-color: #fafafa;
+    overflow-x: hidden;
 }
 
 .parallax-window {

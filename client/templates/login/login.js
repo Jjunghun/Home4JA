@@ -8,6 +8,7 @@ Template.login.events({
                 alert('해당 아이디가 없거나 비밀번호가 맞지 않습니다.');
             } else {
                 alert('로그인이 성공되었습니다.');
+                Router.go('/');
                 console.log(Meteor.user());
             }
         });
