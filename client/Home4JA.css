@@ -1,3 +1,44 @@
+div {
+    display: block;
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+.tada {
+    -webkit-animation-name: tada;
+    animation-name: tada;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+#front-head {
+    position: absolute;
+    color: #ff5729;
+    top: 120px;
+    left: 50%;
+    margin-left: -165px;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+#front-head-intro {
+    position: absolute;
+    color: #ff5729;
+    top: 190px;
+    left: 50%;
+    margin-left: -135px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
 #front-body-intro, #login-body, #join-body {
     padding: 20px;
     margin: auto;
@@ -10,10 +51,16 @@
     line-height: 30px;
 }
 
+strong, b {
+    font-weight: bold;
+}
+
 #front-logout {
     max-width: 200px;
     margin: 20px auto 10px auto;
     background: #ff1018;
+    color: white;
+    text-align: center;
     border: 1px solid #f60008;
     cursor: pointer;
 }
@@ -29,6 +76,27 @@
     margin: 20px auto 10px auto;
     background: #06c800;
     border: 1px solid #06c800;
+    cursor: pointer;
+}
+
+.list-articles {
+    margin: 10px auto;
+    max-width: 800px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 0;
+}
+
+.list-articles li {
+    display: block;
+    border-top: 1px solid #c35a00;
+    background-color: white;
+    margin: 0;
+    padding: 20px 12px;
+    line-height: 25px;
+    word-wrap: break-word;
+    word-break: break-all;
     cursor: pointer;
 }
 
@@ -85,6 +153,17 @@
     font-size: 22px;
     font-weight: bolder;
     letter-spacing: 3px;
+    cursor: pointer;
+}
+
+#navbar #right-logout, #navbar #right-login {
+    float: right;
+    margin-top: 15px;
+    margin-right: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    letter-spacing: 1px;
     cursor: pointer;
 }
 
@@ -173,6 +252,7 @@ h1 {
 
 #front-login-or-join {
     max-width: 450px;
+    text-align: center;
     margin: 20px auto 10px auto;
 }
 
@@ -207,6 +287,7 @@ h1 {
     background: #ffc229;
     border: 1px solid #ffc229;
     font-weight: bolder;
+    text-align: center;
     color: white;
     cursor: pointer;
     margin: 5px 0;
@@ -222,8 +303,30 @@ h1 {
     background: #2966ff;
     border: 1px solid #2966ff;
     font-weight: bolder;
+    text-align: center;
     color: white;
     cursor: pointer;
     margin: 5px 0;
     padding: 5px;
+}
+
+#create-body {
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#create-body .header {
+    max-width: 550px;
+    margin: auto;
+    text-align: left;
+}
+
+#type-check {
+    display: block;
+    max-width: 550px;
+    margin: 20px auto 10px auto;
+    border: 1px solid #afafaf;
+    padding: 10px;
+    text-align: left;
 }
