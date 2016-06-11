@@ -1,0 +1,62 @@
+<head>
+    <title>Home for job applicants</title>
+</head>
+
+<template name="layout">
+    <div class="parallax-mirror" style="visibility: visible; z-index: -100; position: fixed; top: 0px; left: 0px; overflow: hidden; transform: translate3d(0px, 0px, 0px); height: 400px; width: 1903px;"><img class="parallax-slider" src="http://res.cloudinary.com/remotecontrol/image/upload/v1450084031/business_jzlpvg.jpg" style="transform: translate3d(0px, 0px, 0px); position: absolute; top: -434px; left: 0px; height: 1268px; width: 1903px; max-width: none;">
+        <img class="parallax-slider" src="http://cfile272.uf.daum.net/image/235A34435751D86E25441C"
+             style="transform: translate3d(0px, 0px, 0px); position: absolute; top: -434px; left: 0px; height: 1268px; width: 1903px; max-width: none;">
+    </div>
+
+    <div>
+        <div class="parallax-window" style="z-index:200;"></div>
+        <h1 id="front-head" class="animated tada">PatienceValley</h1>
+        <h2 id="front-head-intro" class="animated tada">For Job Applicants</h2>
+    </div>
+
+    <div id="front-body-intro">
+        <div style="text-decoration: underline; margin-bottom: 5px; background-color: white; max-width: 600px; margin: auto; color: red;">
+            <strong>
+                ※ 취업 준비생을 위한 공간입니다.
+            </strong>
+        </div>
+        <br>
+        <div style="background: white; color: black; max-width: 580px; padding: 0 10px; margin: auto;">
+            <div>
+                <strong>
+                    <h3 style="color: red; margin-bottom: 0;">※ 간략 사용법</h3>
+                </strong>
+            </div>
+            <div class="how-to-use" style="text-align: left;">
+                <div style="margin-bottom: 10px">
+                    <strong>1) 글 게시하기 :</strong>
+                     취업 관련 경험담, 털어 놓지 못한 고민을 속편이 털어 주세요.
+                </div>
+                <div>
+                    <strong>2) 힘 보태주기 :</strong>
+                    "글쓴이에게 공감 가는 만큼 힘을 주세요.
+                </div>
+            </div>
+        </div>
+        <div style="text-decoration: underline; margin-top: 20px; margin-bottom: 30px;">
+            서로에게 예의는 꼭 지켜주세요 :)
+        </div>
+
+        {{#if currentUser}}
+            {{> logoutOrPost}}
+        {{/if}}
+
+        {{> yield}}
+    </div>
+
+    <div id="postsList">
+        <ul class="list-articles">
+            <h2 style="margin-left: 10px; color: red;">최신 게시물</h2>
+            {{#each toposts}}
+                {{> postsList}}
+            {{/each}}
+        </ul>
+    </div>
+
+    {{> footer}}
+</template>

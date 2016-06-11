@@ -4,5 +4,10 @@
             <div id="navbar-left"></div>
             <div id="menu">뒤로가기</div>
         </a>
+        {{#if currentUser}}
+            <div id="right-logout">로그아웃</div>
+        {{else}}
+            <div id="right-login">로그인</div>
+        {{/if}}
     </div>
 </template>

@@ -1,3 +1,5 @@
 <template name="postsList">
-    <li>{{postContext.title}} {{postContext.content}}</li>
+    <li>
+        <a href="{{pathFor 'view'}}">{{contentsInfo.title}}</a>
+    </li>
 </template>
