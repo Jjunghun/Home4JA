@@ -1,6 +1,7 @@
 Session.set("target", "default");
 // Session.set(String key, any value);
 
+<<<<<<< HEAD
 Router.configure({
    layoutTemplate: 'layout'
 });
@@ -24,8 +25,17 @@ Template.layout.helpers({
    }
 });
 
+=======
+
+Template.main.helpers({
+    toposts: function () {
+        return Posts.find({});
+    }
+});
+
+>>>>>>> test1
 Template.view.helpers({
-   toposts: function () {
-       return Posts.find({'contentsInfo.title' : Session.get("target")});
-   }
+    toposts: function () {
+        return Posts.find({'contentsInfo.title' : Session.get("target")});
+    }
 });
