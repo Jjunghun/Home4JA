@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
+<<<<<<< HEAD
     <file url="PROJECT" libraries="{meteor-packages-auto-import-browser, meteor-packages-auto-import-npm}" />
+=======
+<<<<<<< HEAD
+=======
+    <file url="PROJECT" libraries="{meteor-packages-auto-import-browser, meteor-packages-auto-import-npm}" />
+>>>>>>> test1
+>>>>>>> 17e1610318f93294307d6eea968b824fe3766ef9
     <includedPredefinedLibrary name="Meteor project library" />
   </component>
 </project>

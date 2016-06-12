@@ -1,10 +1,110 @@
+<<<<<<< HEAD
 #post {
+=======
+body {
+    margin: 0;
+    background-color: #fafafa;
+    overflow-x: hidden;
+}
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+.tada {
+    -webkit-animation-name: tada;
+    animation-name: tada;
+}
+
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+#front-head {
+    position: absolute;
+    color: #ff5729;
+    top: 120px;
+    left: 50%;
+    margin-left: -165px;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+#front-head-intro {
+    position: absolute;
+    color: #ff5729;
+    top: 190px;
+    left: 50%;
+    margin-left: -135px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#front-body-intro, #login-body, #join-body {
+    padding: 20px;
+    margin: auto;
+    color: white;
+    font-size: 18px;
+    font-weight: 300;
+    background: #ff5729;
+    border-top: 1px solid #ff5729;
+    text-align: center;
+    line-height: 30px;
+}
+
+strong, b {
+    font-weight: bold;
+}
+
+#front-logout {
+    max-width: 200px;
+    margin: 20px auto 10px auto;
+    background: #ff1018;
+    color: white;
+    text-align: center;
+    border: 1px solid #f60008;
+    cursor: pointer;
+}
+
+#front-create-article-a {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+#front-create-article {
+>>>>>>> 17e1610318f93294307d6eea968b824fe3766ef9
     max-width: 200px;
     margin: 20px auto 10px auto;
     background: #06c800;
     border: 1px solid #06c800;
     color: white;
     text-align: center;
+    cursor: pointer;
+}
+
+.list-articles {
+    margin: 10px auto;
+    max-width: 800px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 0;
+}
+
+.list-articles li {
+    display: block;
+    border-top: 1px solid #c35a00;
+    background-color: white;
+    margin: 0;
+    padding: 20px 12px;
+    line-height: 25px;
+    word-wrap: break-word;
+    word-break: break-all;
     cursor: pointer;
 }
 
@@ -122,6 +222,17 @@
 }
 
 
+#navbar #right-logout, #navbar #right-login {
+    float: right;
+    margin-top: 15px;
+    margin-right: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
 input {
     font: inherit;
     margin: 5px 0;
@@ -182,6 +293,7 @@ input {
     border-top: 1px solid #ff5729;
     text-align: center;
 }
+<<<<<<< HEAD
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 .login-page {
@@ -278,3 +390,108 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+=======
+
+#login-body, #join-body {
+    margin: auto;
+    background: white;
+    border-top: 0;
+    text-align: center;
+}
+
+#login-body h1, #join-body h1 {
+    color: black;
+    margin: 40px auto;
+}
+
+h1 {
+    display: block;
+    font-size: 2em;
+    -webkit-margin-before: 0.67em;
+    -webkit-margin-after: 0.67em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+#front-login-or-join {
+    max-width: 450px;
+    text-align: center;
+    margin: 20px auto 10px auto;
+}
+
+#front-login-or-join #change-to-login {
+    background: #ffc229;
+}
+
+#front-login-or-join #change-to-join {
+    background: #2966ff;
+}
+
+#front-login, #front-join {
+    max-width: 450px;
+    margin: 20px auto 10px auto;
+}
+
+#front-login-or-join div {
+    display: inline-block;
+    width: 45%;
+    margin: 0;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+}
+
+#front-login-username, #front-login-password {
+    border: 1px solid #ffc229;
+}
+
+#front-login-submit {
+    border-radius: 0;
+    background: #ffc229;
+    border: 1px solid #ffc229;
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+#front-join-username, #front-join-password {
+    border: 1px solid #2966ff;
+}
+
+#front-join-submit {
+    border-radius: 0;
+    background: #2966ff;
+    border: 1px solid #2966ff;
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    margin: 5px 0;
+    padding: 5px;
+}
+
+#create-body {
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#create-body .header {
+    max-width: 550px;
+    margin: auto;
+    text-align: left;
+}
+
+#type-check {
+    display: block;
+    max-width: 550px;
+    margin: 20px auto 10px auto;
+    border: 1px solid #afafaf;
+    padding: 10px;
+    text-align: left;
+}
+>>>>>>> 17e1610318f93294307d6eea968b824fe3766ef9

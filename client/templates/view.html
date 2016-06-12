@@ -1,0 +1,27 @@
+<template name="view">
+    {{> navbar}}
+    <div id="create-body">
+        <div class="header">
+            <h1><span style="color: #97cefa;">게시물 </span>보기</h1>
+            <hr>
+            <div>
+                <strong style="color: #2966ff">
+                    {{#each toposts}}
+                        {{contentsInfo.title}}
+                    {{/each}}
+                </strong>
+            </div>
+        </div>
+        <div id="type-check">
+            <div class="type-check-line" style="margin-bottom: 30px;"></div>
+            <pre style="color: #2966ff">
+                {{#each toposts}}
+                    {{contentsInfo.content}}
+                {{/each}}
+            </pre>
+            <hr>
+        </div>
+    </div>
+</template>
+
+

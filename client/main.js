@@ -1,9 +1,18 @@
+Session.set("target", "default");
+// Session.set(String key, any value);
+
+<<<<<<< HEAD
 Router.configure({
+<<<<<<< HEAD
     mainTemplate: 'main'
+=======
+   layoutTemplate: 'layout'
+>>>>>>> 17e1610318f93294307d6eea968b824fe3766ef9
 });
 
 Router.route('/', {name: 'main'});
 Router.route('/post', {name: 'post'});
+<<<<<<< HEAD
 Router.route('/complete', {name: 'complete'});
 Router.route('/about', {name: 'about'});
 // Router.route('/post', function () {
@@ -48,22 +57,44 @@ Template.main.events({
        };
 
         console.log(loginInfo);
+=======
+Router.route('/login', {name: 'loginPage'});
+Router.route('/joinPage', {name: 'joinPage'});
+Router.route('/view/:_id', {
+    name: 'view',
+    data: function () {
+        var id = this.params._id;
+        return Posts.find({_id: id});
+    }
+});
+>>>>>>> 17e1610318f93294307d6eea968b824fe3766ef9
 
+Template.layout.helpers({
+   toposts: function () {
+       return Posts.find({});
+   }
+});
 
+=======
 
-        //Accounts.createUser({name: name, password: password, email: email},
-        //    function (err) {
-        //        if (err) {}
-        //        else {}
-        //    });
-        //
-        //return false;
+Template.main.helpers({
+    toposts: function () {
+        return Posts.find({});
     }
 });
 
+<<<<<<< HEAD
 Template.main.helpers({
    toposts: function () {
        console.log(Posts.find({}));
        return Posts.find({});
    } 
 });
+=======
+>>>>>>> test1
+Template.view.helpers({
+    toposts: function () {
+        return Posts.find({'contentsInfo.title' : Session.get("target")});
+    }
+});
+>>>>>>> 17e1610318f93294307d6eea968b824fe3766ef9
