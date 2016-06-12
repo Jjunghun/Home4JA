@@ -15,20 +15,21 @@
         </h2>
 
 
-
-
         <div id="introBar">
              <span>
-            <a href="/intro" class="about-nav">Intro</a>
+            <a href="{{pathFor 'intro'}}" class="about-nav">Intro</a>
         </span>
         <span>
             <a href="{{pathFor 'rules'}}" class="about-nav">Rules</a>
         </span>
         <span>
-            <a href="/tips" class="about-nav">Tips</a>
+            <a href="{{pathFor 'tips'}}" class="about-nav">Tips</a>
         </span>
         </div>
+
     </div>
+
+
 
     <div>
         {{yield}}

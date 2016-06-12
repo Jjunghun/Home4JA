@@ -1,9 +1,12 @@
 
 Router.configure({
-    mainTemplate: 'list'
+    layoutTemplate:'about',
+    loadingTemplate: 'loading',
+    waitOn:function() {return Meteor.subscribe('posts');}
 });
 
 
-Router.route('/intro', {name: 'intro'});
-Router.route('/rules', {name: 'rules'});
-Router.route('/tips', {name: 'tips'});
+Router.route('/', {name: 'list'});
+Router.route('/posts/:_id', {
+    name: 'list'
+});
