@@ -47,7 +47,7 @@ body {
     color: white;
     font-size: 18px;
     font-weight: 300;
-    background: #ff5729;
+    background: #191970;
     border-top: 1px solid #ff5729;
     text-align: center;
     line-height: 30px;
@@ -130,9 +130,9 @@ strong, b {
     right: 0;
     width: 100%;
     height: 50px;
-    background: #ff5729;
+    background: #191970;
     border-bottom: 1px solid #ff5729;
-    border-top: 1px solid #ff5729;
+    border-top: 1px solid #191970;
 }
 
 #navbar #navbar-left {
@@ -207,6 +207,32 @@ input {
     word-break: break-all;
 }
 
+.type-check-line pre {
+    margin-top: 5px;
+}
+
+pre {
+    font: inherit;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-size: 16px;
+    border: 1px solid #bdbdbd;
+    background: white;
+    overflow: hidden;
+    -ms-overflow-x: hidden;
+    -ms-overflow-y: hidden;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
 .confirm {
     order-radius: 0;
     background: green;
@@ -225,7 +251,7 @@ input {
     color: white;
     font-size: 14px;
     font-weight: 300;
-    background: #ff5729;
+    background: #191970;
     border-top: 1px solid #ff5729;
     text-align: center;
 }
@@ -242,6 +268,10 @@ input {
     margin: 40px auto;
 }
 
+div {
+    display: block;
+}
+
 h1 {
     display: block;
     font-size: 2em;
@@ -250,6 +280,26 @@ h1 {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     font-weight: bold;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+hr {
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    border-style: inset;
+    border-width: 1px;
 }
 
 #front-login-or-join {
@@ -331,4 +381,32 @@ h1 {
     border: 1px solid #afafaf;
     padding: 10px;
     text-align: left;
+}
+
+#about-body {
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#about-body .header {
+    max-width: 550px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-nav {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    font-size: 20px;
+    margin: 40px;
+    cursor: pointer;
+}
+
+#intro, #rules, #tips {
+    text-align: left;
+    padding: 20px 0;
+    border-bottom: 1px solid black;
+    line-height: 30px;
 }

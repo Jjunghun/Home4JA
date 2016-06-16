@@ -2,25 +2,27 @@
     {{> navbar}}
     <div id="create-body">
         <div class="header">
-            <h1><span style="color: #97cefa;">게시물 </span>보기</h1>
+            <h1><span style="color: #00008b;">게시물 </span>보기</h1>
             <hr>
             <div>
-                <strong style="color: #2966ff">
+                <strong>
                     {{#each toposts}}
-                        {{contentsInfo.title}}
+                        <h3>{{contentsInfo.title}}</h3>
                     {{/each}}
                 </strong>
             </div>
         </div>
         <div id="type-check">
-            <div class="type-check-line" style="margin-bottom: 30px;"></div>
-            <pre style="color: #2966ff">
-                {{#each toposts}}
-                    {{contentsInfo.content}}
-                {{/each}}
-            </pre>
-            <hr>
+            <div class="type-check-line" style="margin-bottom: 30px;">
+                <pre>
+                    {{#each toposts}}
+                        {{contentsInfo.content}}
+                    {{/each}}
+                </pre>
+            </div>
+            <div>수정</div><div id="delete">삭제</div>
         </div>
+        <div style="margin-top: 60px;"></div>
     </div>
 </template>
 

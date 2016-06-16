@@ -15,3 +15,5 @@ Router.route('/view/:_id', {
         return Posts.find({_id: id});
     }
 });
+
+Router.route('/about', {name: 'about'});
