@@ -7,7 +7,6 @@ Router.route('/login', {name: 'login'});
 Router.route('/join', {name: 'join'});
 Router.route('/post', {name: 'post'});
 Router.route('/loginPage', {name: 'loginPage'});
-Router.route('/joinPage', {name: 'joinPage'});
 Router.route('/view/:_id', {
     name: 'view',
     data: function () {
@@ -17,3 +16,4 @@ Router.route('/view/:_id', {
 });
 
 Router.route('/about', {name: 'about'});
+Router.route('/contact', {name: 'contact'});

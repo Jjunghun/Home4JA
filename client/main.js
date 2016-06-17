@@ -1,6 +1,3 @@
-Session.set("target", "default");
-// Session.set(String key, any value);
-
 Template.main.helpers({
     toposts: function () {
         return Posts.find({}, {sort: {createdAt: -1}});
@@ -9,39 +6,45 @@ Template.main.helpers({
 
 Template.view.helpers({
     toposts: function () {
-        return Posts.find({'contentsInfo.title' : Session.get("target")});
+        var post_id = Session.get("post_id");
+        return Posts.find({_id: post_id});
     }
 });
 
 Template.post.events({
     'click .confirm': function () {
         var contentsInfo = {
+            startYear : $("#create-year").val(),
+            workType : $("#create-type").val(),
+            company : $("#create-company-name").val(),
+            name : $("#create-name").val(),
             title : $("#new-title").val(),
             content : $("#new-content").val()
         };
-
         Meteor.call("addPost", contentsInfo);
-
-        var _id = Posts.findOne({}, {sort : {createdAt : -1}})._id;
-
-        Session.set("_id", _id);
-        console.log("Session get : " + Session.get("_id"));
-
         Router.go('/');
     }
 });
 
 Template.postsList.events({
-    'click a' : function(event){
-        Session.set("target", event.target.text);
-        console.log(Session.get("target"));
+    'click a': function(event){
+        Session.set("post_id", this._id);
+
+        var post = Posts.findOne(this._id);
+        console.log("1) post.owner: " + post.owner);
+        console.log("2) current owner: " + Meteor.userId());
+        console.log(post.owner==Meteor.userId());
+        if(post.owner==Meteor.userId()) {
+            $("#modifyOrDelete").hide();
+        }
     }
 });
 
 Template.view.events({
     'click #delete': function () {
         console.log("Call the deletePost!");
-        Meteor.call("deletePost", Session.get("_id"));
+        alert("삭제하시겠습니까?");
+        Meteor.call("deletePost", Session.get("post_id"));
         Router.go('/');
     }
 });
@@ -58,6 +61,9 @@ Template.login.events({
                 alert('로그인이 성공되었습니다.');
                 Router.go('/');
                 console.log(Meteor.user());
+
+                //Session.set("userId", Meteor.userId());
+                // console.log("userId: " + Session.get("userId"));
             }
         });
     },
@@ -69,7 +75,7 @@ Template.login.events({
 
 Template.loginPage.events({
     'click #change-to-join' : function () {
-        Router.go('/joinPage');
+        Router.go('/join');
     }
 });
 
@@ -79,7 +85,9 @@ Template.join.events({
             // username : $("#front-join-username").val(),
             // password : $("#front-join-password").val()
             username: tmpl.find('input[id=front-join-username]').value,
-            password: tmpl.find('input[id=front-join-password]').value
+            password: tmpl.find('input[id=front-join-password]').value,
+            email: tmpl.find('input[id=front-join-email]').value,
+            phone: tmpl.find('input[id=front-join-phone]').value
         };
 
         Accounts.createUser (joinInfo, function (error) {
@@ -97,15 +105,10 @@ Template.join.events({
     }
 });
 
-Template.joinPage.events({
-    'click #change-to-login' : function () {
-        Router.go('/loginPage');
-    }
-});
-
 Template.logoutOrPost.events({
     'click #front-logout' : function () {
         Meteor.logout(function () {
+            Session.set("userId", null);
             Router.go('/');
         });
     }
@@ -121,3 +124,37 @@ Template.navbar.events({
         Router.go('/loginPage');
     }
 });
+
+Template.about.events({
+    'click #boot':function (evt) {
+        $('html, body').animate({scrollTop: $("#tips").offset().top}, 0);
+        $('#tips').css('margin-bottom',750);
+    }
+});
+
+Template.messages.helpers({
+    messages: function () {
+        return Messages.find({}, {sort: {time: -1}});
+    }
+});
+
+Template.input.events = {
+    'keydown input#message' : function (event) {
+        if (event.which == 13) { // 13 is the enter key event
+
+            var name = '비회원';
+            var message = document.getElementById('message');
+
+            if (message.value != '') {
+                Messages.insert({
+                    name: name,
+                    message: message.value,
+                    time: Date.now()
+                });
+
+                document.getElementById('message').value = '';
+                message.value = '';
+            }
+        }
+    }
+}

@@ -1,17 +1,36 @@
 <template name="post">
     {{> navbar}}
+    <div id="create-body">
+        <div id="type-check">
+            <div id="public-type">
 
-    <div id="type-check">
-        <div class="type-check-line">
-            <strong>제 목</strong>
-            <input id="new-title" type="text" name="title" placeholder="제목을 입력하세요.">
+            </div>
+            <div class="type-check-line">
+                <strong>시작 연도/연차</strong>
+                <input id="create-year" tabindex="0" placeholder="예) 2015년/2년차">
+            </div>
+            <div class="type-check-line">
+                <strong>희망 업종</strong>
+                <input id="create-type" tabindex="0" placeholder="예) ICT 기업">
+            </div>
+            <div class="type-check-line">
+                <strong>희망 기업</strong>
+                <input id="create-company-name" tabindex="0" placeholder="예) NAVER">
+            </div>
+            <div class="type-check-line">
+                <strong>실 명</strong>
+                <input id="create-name" tabindex="0" placeholder="예) 홍길동">
+            </div>
+            <div style="margin-top: 50px;"></div>
+            <div class="type-check-line">
+                <strong>제 목</strong>
+                <input id="new-title" type="text" name="title" placeholder="제목을 입력하세요.">
+            </div>
+            <div class="type-check-line">
+                <strong>내 용</strong>
+                <textarea id="new-content" name="content" tabindex="0" placeholder="내용을 입력하세요."></textarea>
+            </div>
+            <div class="confirm">등록하기</div>
         </div>
-
-        <div class="type-check-line">
-            <strong>내 용</strong>
-            <textarea id="new-content" name="content" tabindex="0" placeholder="내용을 입력하세요."></textarea>
-        </div>
-
-        <div class="confirm">등록하기</div>
     </div>
 </template>

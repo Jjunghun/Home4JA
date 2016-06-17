@@ -13,6 +13,22 @@
             </div>
         </div>
         <div id="type-check">
+            <div class="type-check-line" style="margin-left:5px;">
+                <strong>시작 연도/연차</strong>
+                <div>
+                    {{#each toposts}}
+                        {{contentsInfo.startYear}}
+                    {{/each}}
+                </div>
+            </div>
+            <div class="type-check-line" style="margin-left:5px;">
+                <strong>희망 업종</strong>
+                <div>
+                    {{#each toposts}}
+                        {{contentsInfo.workType}}
+                    {{/each}}
+                </div>
+            </div>
             <div class="type-check-line" style="margin-bottom: 30px;">
                 <pre>
                     {{#each toposts}}
@@ -20,10 +36,13 @@
                     {{/each}}
                 </pre>
             </div>
-            <div>수정</div><div id="delete">삭제</div>
+            <div style="margin-top: 60px;"></div>
+            <br>
+        </div>
+        <div id="modifyOrDelete" >
+            <div id="modify">수정</div>
+            <div id="delete">삭제</div>
         </div>
         <div style="margin-top: 60px;"></div>
     </div>
 </template>
-
-

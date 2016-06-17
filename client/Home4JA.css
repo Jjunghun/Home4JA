@@ -10,14 +10,14 @@ body {
 }
 
 .tada {
-    -webkit-animation-name: tada;
+    /*-webkit-animation-name: tada;*/
     animation-name: tada;
 }
 
 .animated {
-    -webkit-animation-duration: 1s;
+    /*-webkit-animation-duration: 1s;*/
     animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
+    /*-webkit-animation-fill-mode: both;*/
     animation-fill-mode: both;
 }
 
@@ -180,6 +180,18 @@ input {
     font-size: 16px;
 }
 
+#create-body {
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#public-type {
+    max-width: 450px;
+    margin: 20px auto 10px auto;
+    text-align: center;
+}
+
 #type-check {
     display: block;
     max-width: 550px;
@@ -192,6 +204,13 @@ input {
 .type-check-line {
     vertical-align: middle;
     margin: 10px 0;
+}
+
+textarea {
+    overflow: hidden;
+    -ms-overflow-x: hidden;
+    -ms-overflow-y: hidden;
+    min-height: 250px;
 }
 
 .type-check-line textarea {
@@ -216,21 +235,46 @@ pre {
     text-align: left;
     width: 100%;
     padding: 10px;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    /*-moz-box-sizing: border-box;*/
     font-size: 16px;
     border: 1px solid #bdbdbd;
     background: white;
     overflow: hidden;
-    -ms-overflow-x: hidden;
-    -ms-overflow-y: hidden;
+    /*-ms-overflow-x: hidden;*/
+    /*-ms-overflow-y: hidden;*/
     white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
+    /*white-space: -moz-pre-wrap;*/
+    /*white-space: -pre-wrap;*/
+    /*white-space: -o-pre-wrap;*/
     word-wrap: break-word;
     word-break: break-all;
+}
+
+#modifyOrDelete {
+    max-width: 450px;
+    margin: 20px auto 10px auto;
+    text-align: center;
+    cursor: pointer;
+}
+
+#modifyOrDelete div {
+    display: inline-block;
+    width: 45%;
+    margin: 0;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+#modifyOrDelete #modify {
+    background: #06c800;
+}
+
+#modifyOrDelete #delete {
+    background: #ff1018;
 }
 
 .confirm {
@@ -346,7 +390,7 @@ hr {
     padding: 5px;
 }
 
-#front-join-username, #front-join-password {
+#front-join-username, #front-join-password, #front-join-email, #front-join-phone {
     border: 1px solid #2966ff;
 }
 
@@ -409,4 +453,73 @@ hr {
     padding: 20px 0;
     border-bottom: 1px solid black;
     line-height: 30px;
+}
+
+.rules-title {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.rules-content {
+    margin-bottom: 25px;
+}
+
+.questions {
+    background-color: #ffc229;
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid #f5af00;
+    margin: 0;
+}
+
+.answers {
+    padding: 5px 10px;
+    margin: 0;
+    border-right: 1px solid #f5af00;
+    border-left: 1px solid #f5af00;
+}
+
+.login-buttons-dropdown-align-right {
+    float: right;
+}
+
+.psb{
+    color: red;
+
+}
+
+#contact-body .header {
+    max-width: 550px;
+    margin: auto;
+    text-align: left;
+}
+
+#contact-body textarea, #admin-body textarea {
+    font: inherit;
+    margin: 5px 0;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #bdbdbd;
+    min-height: 100px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#create-submit {
+    border-radius: 0;
+    background: green;
+    border: 1px solid darkgreen;
+    font-weight: bolder;
+    color: white;
+    cursor: pointer;
+    margin: 5px 0;
+    text-align: center;
+    padding: 5px;
 }
